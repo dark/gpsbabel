@@ -50,7 +50,7 @@ win32 {
 win32-g++ {
   QMAKE_LFLAGS_RELEASE += -static-libgcc
 }
-unix:TARGET=gpsbabelfe-bin
+unix:TARGET=gpsbabelfe
 mac:TARGET=GPSBabelFE
 
 FORMS += aboutui.ui
