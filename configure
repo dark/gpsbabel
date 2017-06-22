@@ -6150,7 +6150,7 @@ done
 
 
 
-ac_config_files="$ac_config_files Makefile gbversion.h gui/setup.iss xmldoc/makedoc tools/mkcapabilities win32/gpsbabel.rc jeeps/Makefile shapelib/Makefile zlib/empty"
+ac_config_files="$ac_config_files Makefile gbversion.h gui/setup.iss xmldoc/makedoc tools/mkcapabilities win32/gpsbabel.rc jeeps/Makefile"
 
 ac_config_files="$ac_config_files gui/makelinuxdist.sh"
 
@@ -6853,8 +6853,6 @@ do
     "tools/mkcapabilities") CONFIG_FILES="$CONFIG_FILES tools/mkcapabilities" ;;
     "win32/gpsbabel.rc") CONFIG_FILES="$CONFIG_FILES win32/gpsbabel.rc" ;;
     "jeeps/Makefile") CONFIG_FILES="$CONFIG_FILES jeeps/Makefile" ;;
-    "shapelib/Makefile") CONFIG_FILES="$CONFIG_FILES shapelib/Makefile" ;;
-    "zlib/empty") CONFIG_FILES="$CONFIG_FILES zlib/empty" ;;
     "gui/makelinuxdist.sh") CONFIG_FILES="$CONFIG_FILES gui/makelinuxdist.sh" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
