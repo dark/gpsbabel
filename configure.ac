@@ -152,13 +152,13 @@ AS_IF([test "$QMAKE" = "no"], [
 ])
 
 # guess the name of the Qt Core library.
-QT_LIBVER=$($QMAKE -query -query QT_VERSION | sed -e 's/\..*//')
+QT_LIBVER="5"
 AS_IF([test "$QT_LIBVER" -ge 5], [
-	QT_LIBS="-L$($QMAKE -query QT_INSTALL_LIBS) -lQt${QT_LIBVER}Core"
+	QT_LIBS="-L/usr/lib64/qt5/ -lQt${QT_LIBVER}Core"
 ], [
-	QT_LIBS="-L$($QMAKE -query QT_INSTALL_LIBS) -lQtCore"
+	QT_LIBS="-L/usr/lib64/qt5/ -lQtCore"
 ])
-QT_INC=$($QMAKE -query QT_INSTALL_HEADERS)
+QT_INC="/usr/include/qt5"
 QT_INC_OPT="-I"
 QT_SYSINC_OPT="-isystem"
 
