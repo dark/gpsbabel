@@ -39,7 +39,6 @@ Preferences::Preferences(QWidget* parent, QList<Format>& formatList,
 {
   ui_.setupUi(this);
 
-  ui_.startupCheck->setChecked(babelData_.startupVersionCheck_);
   ui_.reportStatisticsCheck->setChecked(babelData_.reportStatistics_);
   ui_.ignoreVersionMismatchCheck->setChecked(babelData_.ignoreVersionMismatch_);
   // Because of an unfortunate bug in 1.4.0, we turn this off in 1.4.1.
@@ -82,7 +81,6 @@ void Preferences::acceptClicked()
     formatList_[i].setHidden(item->checkState() == Qt::Unchecked);
   }
 
-  babelData_.startupVersionCheck_ = ui_.startupCheck->isChecked();
   babelData_.reportStatistics_ = ui_.reportStatisticsCheck->isChecked();
   babelData_.ignoreVersionMismatch_ = ui_.ignoreVersionMismatchCheck->isChecked();
   accept();

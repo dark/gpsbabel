@@ -40,13 +40,6 @@
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QCheckBox" name="startupCheck">
-          <property name="text">
-           <string>Check for newer version on start.</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QCheckBox" name="reportStatisticsCheck">
           <property name="text">
            <string>Anonymously report usage data.</string>

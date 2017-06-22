@@ -147,7 +147,6 @@ MainWindow::MainWindow(QWidget* parent): QMainWindow(parent)
   connect(ui_.actionAbout, SIGNAL(triggered()), this, SLOT(aboutActionX()));
   connect(ui_.actionVisit_Website, SIGNAL(triggered()), this, SLOT(visitWebsiteActionX()));
   connect(ui_.actionMake_a_Donation, SIGNAL(triggered()), this, SLOT(donateActionX()));
-  connect(ui_.actionUpgradeCheck, SIGNAL(triggered()), this, SLOT(upgradeCheckActionX()));
   connect(ui_.actionPreferences, SIGNAL(triggered()), this, SLOT(preferencesActionX()));
 
   connect(ui_.inputFormatCombo,  SIGNAL(currentIndexChanged(int)),
@@ -208,17 +207,6 @@ MainWindow::MainWindow(QWidget* parent): QMainWindow(parent)
   restoreSettings();
 
   upgrade = new UpgradeCheck(parent, formatList_, babelData_);
-  if (babelData_.startupVersionCheck_) {
-    upgrade->checkForUpgrade(babelVersion_, babelData_.upgradeCheckTime_,
-                             allowBetaUpgrades());
-  }
-
-  if (!babelData_.ignoreVersionMismatch_ && babelVersion_ != VERSION) {
-    VersionMismatch vm(0, babelVersion_, QString(VERSION));
-
-    vm.exec();
-    babelData_.ignoreVersionMismatch_ = vm.neverAgain();
-  }
 }
 
 //------------------------------------------------------------------------
@@ -1021,10 +1009,6 @@ void MainWindow::applyActionX()
 //------------------------------------------------------------------------
 void MainWindow::closeActionX()
 {
-  QDateTime wt= upgrade->getUpgradeWarningTime();
-  if (wt.isValid()) {
-    babelData_.upgradeCheckTime_ = wt;
-  }
   babelData_.runCount_++;
 
   QDateTime now = QDateTime::currentDateTime();

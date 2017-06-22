@@ -637,7 +637,6 @@
     <addaction name="actionHelp"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
-    <addaction name="actionUpgradeCheck"/>
     <addaction name="separator"/>
     <addaction name="actionVisit_Website"/>
     <addaction name="actionMake_a_Donation"/>
@@ -664,11 +663,6 @@
   <action name="actionPreferences">
    <property name="text">
     <string>Preferences...</string>
-   </property>
-  </action>
-  <action name="actionUpgradeCheck">
-   <property name="text">
-    <string>Check for Upgrade</string>
    </property>
   </action>
   <action name="actionVisit_Website">

@@ -63,7 +63,7 @@ public:
     upgradeErrors_(0),
     upgradeOffers_(0),
     runCount_(0),
-    startupVersionCheck_(true),
+    startupVersionCheck_(false),
     reportStatistics_(false),
     allowBetaUpgrades_(false),
     ignoreVersionMismatch_(false),
