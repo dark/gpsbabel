@@ -367,6 +367,6 @@ AC_SUBST(QT_INC_OPT)
 AC_SUBST(QT_SYSINC_OPT)
 AC_SUBST(QT_LIBS)
 
-AC_CONFIG_FILES([Makefile gbversion.h gui/setup.iss xmldoc/makedoc tools/mkcapabilities win32/gpsbabel.rc jeeps/Makefile zlib/empty])
+AC_CONFIG_FILES([Makefile gbversion.h gui/setup.iss xmldoc/makedoc tools/mkcapabilities win32/gpsbabel.rc jeeps/Makefile])
 AC_CONFIG_FILES([gui/makelinuxdist.sh], [chmod +x gui/makelinuxdist.sh])
 AC_OUTPUT
