@@ -46,13 +46,6 @@
           </property>
          </widget>
         </item>
-        <item>
-         <widget class="QCheckBox" name="ignoreVersionMismatchCheck">
-          <property name="text">
-           <string>Ignore mismatch between command line and GUI version.</string>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
      </widget>

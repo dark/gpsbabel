@@ -66,7 +66,7 @@ public:
     startupVersionCheck_(false),
     reportStatistics_(false),
     allowBetaUpgrades_(false),
-    ignoreVersionMismatch_(false),
+    ignoreVersionMismatch_(true),
     disableDonateDialog_(false),
     donateSplashed_(QDateTime(QDate(2010, 1, 1), QTime(0, 0, 0)))
   {

@@ -40,7 +40,6 @@ Preferences::Preferences(QWidget* parent, QList<Format>& formatList,
   ui_.setupUi(this);
 
   ui_.reportStatisticsCheck->setChecked(babelData_.reportStatistics_);
-  ui_.ignoreVersionMismatchCheck->setChecked(babelData_.ignoreVersionMismatch_);
   // Because of an unfortunate bug in 1.4.0, we turn this off in 1.4.1.
   if (VERSION == QString("1.4.1"))
     babelData_.ignoreVersionMismatch_ = false;
@@ -82,7 +81,6 @@ void Preferences::acceptClicked()
   }
 
   babelData_.reportStatistics_ = ui_.reportStatisticsCheck->isChecked();
-  babelData_.ignoreVersionMismatch_ = ui_.ignoreVersionMismatchCheck->isChecked();
   accept();
 }
 
