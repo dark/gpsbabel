@@ -257,6 +257,9 @@ fit_parse_definition_message(uint8_t header)
 
   // next two bytes are the global message number
   def->global_id = fit_getuint16();
+  if (global_opts.debug_level >= 8) {
+    debug_print(8,"%s: definition message refers to global id %d\n",MYNAME, def->global_id);
+  }
 
   // byte 5 has the number of records in the remainder of the definition message
   def->num_fields = fit_getuint8();
