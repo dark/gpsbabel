@@ -645,6 +645,9 @@ fit_parse_record()
     if (global_opts.debug_level >= 6) {
       debug_print(6,"%s: got definition message at fit_data.len=%d", MYNAME, fit_data.len);
       debug_print(0," ...local message type 0x%X\n", header&0x0f);
+      if (header & 0x20) {
+        debug_print(6,"%s: !!! this message contains developer data\n", MYNAME);
+      }
     }
     fit_parse_definition_message(header);
   } else {
