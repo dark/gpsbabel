@@ -64,7 +64,7 @@ public:
     upgradeOffers_(0),
     runCount_(0),
     startupVersionCheck_(true),
-    reportStatistics_(true),
+    reportStatistics_(false),
     allowBetaUpgrades_(false),
     ignoreVersionMismatch_(false),
     disableDonateDialog_(false),
